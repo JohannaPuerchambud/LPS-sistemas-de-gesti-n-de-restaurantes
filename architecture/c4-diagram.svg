@@ -1,0 +1,107 @@
+<svg width="680" height="780" viewBox="0 0 680 780" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff;font-family:Arial,Helvetica,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- TÍTULO -->
+  <text x="340" y="15" text-anchor="middle" font-size="11" fill="#888780">C4 — Nivel 2 Container Diagram</text>
+
+  <!-- USUARIO -->
+  <rect x="270" y="22" width="140" height="44" rx="8" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="340" y="49" text-anchor="middle" font-size="14" font-weight="600" fill="#2C2C2A">Usuario</text>
+
+  <!-- Flecha Usuario → Web/Mobile -->
+  <line x1="340" y1="66" x2="340" y2="100" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- WEB / MOBILE APP -->
+  <rect x="220" y="100" width="240" height="56" rx="8" fill="#B5D4F4" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="340" y="124" text-anchor="middle" font-size="14" font-weight="600" fill="#0C447C">Web / Mobile App</text>
+  <text x="340" y="143" text-anchor="middle" font-size="12" fill="#185FA5">React · Flutter</text>
+
+  <!-- Flecha Web → Backend -->
+  <line x1="340" y1="156" x2="340" y2="190" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- BACKEND API container -->
+  <rect x="40" y="190" width="600" height="318" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="340" y="214" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">Backend API</text>
+  <text x="340" y="230" text-anchor="middle" font-size="12" fill="#0F6E56">Node.js / Python · REST + GraphQL</text>
+
+  <!-- Módulo Auth -->
+  <rect x="64" y="246" width="148" height="56" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="138" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Auth module</text>
+  <text x="138" y="288" text-anchor="middle" font-size="11" fill="#0F6E56">JWT · OAuth 2.0</text>
+
+  <!-- Módulo Menu -->
+  <rect x="236" y="246" width="148" height="56" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="310" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Menu module</text>
+  <text x="310" y="288" text-anchor="middle" font-size="11" fill="#0F6E56">Catálogo · precios</text>
+
+  <!-- Módulo Orders -->
+  <rect x="408" y="246" width="148" height="56" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="482" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Orders module</text>
+  <text x="482" y="288" text-anchor="middle" font-size="11" fill="#0F6E56">Pedidos · estado</text>
+
+  <!-- Módulo Payment -->
+  <rect x="64" y="326" width="148" height="56" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="138" y="350" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Payment module</text>
+  <text x="138" y="368" text-anchor="middle" font-size="11" fill="#0F6E56">Cobros · reembolsos</text>
+
+  <!-- Módulo Delivery -->
+  <rect x="236" y="326" width="148" height="56" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="310" y="350" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Delivery module</text>
+  <text x="310" y="368" text-anchor="middle" font-size="11" fill="#0F6E56">Rutas · tracking</text>
+
+  <!-- Módulo Inventory -->
+  <rect x="408" y="326" width="148" height="56" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="482" y="350" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Inventory module</text>
+  <text x="482" y="368" text-anchor="middle" font-size="11" fill="#0F6E56">Stock · alertas</text>
+
+  <!-- Info interna backend -->
+  <line x1="64" y1="402" x2="616" y2="402" stroke="#0F6E56" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.4"/>
+  <text x="340" y="422" text-anchor="middle" font-size="11" fill="#0F6E56">Shared: logging · caching · message queue · Docker · Kubernetes</text>
+  <text x="340" y="440" text-anchor="middle" font-size="11" fill="#0F6E56">Internal bus: eventos entre módulos · v2.4.0</text>
+  <text x="340" y="458" text-anchor="middle" font-size="11" fill="#0F6E56">Autenticación centralizada por JWT en cada request</text>
+  <text x="340" y="475" text-anchor="middle" font-size="11" fill="#085041" font-weight="600">[Container: Backend API]</text>
+  <text x="340" y="493" text-anchor="middle" font-size="11" fill="#0F6E56">Expone REST/GraphQL — consume DB y servicios externos</text>
+
+  <!-- Flecha Backend → Database -->
+  <line x1="340" y1="508" x2="340" y2="558" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- DATABASE -->
+  <rect x="210" y="558" width="260" height="56" rx="8" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="340" y="582" text-anchor="middle" font-size="14" font-weight="600" fill="#3C3489">Database</text>
+  <text x="340" y="600" text-anchor="middle" font-size="12" fill="#534AB7">PostgreSQL · Redis cache</text>
+
+  <!-- Flechas a externos -->
+  <path d="M138 508 L138 590 L138 643" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <path d="M542 508 L542 590 L542 643" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <text x="98" y="588" text-anchor="middle" font-size="10" fill="#5F5E5A">procesa pago</text>
+  <text x="584" y="588" text-anchor="middle" font-size="10" fill="#5F5E5A">envía alerta</text>
+
+  <!-- Payment Gateway -->
+  <rect x="40" y="643" width="196" height="56" rx="8" fill="#FAC775" stroke="#854F0B" stroke-width="0.5"/>
+  <text x="138" y="667" text-anchor="middle" font-size="13" font-weight="600" fill="#633806">Payment Gateway</text>
+  <text x="138" y="685" text-anchor="middle" font-size="11" fill="#854F0B">Stripe · PayPal</text>
+
+  <!-- Notification Service -->
+  <rect x="444" y="643" width="196" height="56" rx="8" fill="#F5C4B3" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="542" y="667" text-anchor="middle" font-size="13" font-weight="600" fill="#4A1B0C">Notification service</text>
+  <text x="542" y="685" text-anchor="middle" font-size="11" fill="#993C1D">Email · SMS · Push</text>
+
+  <!-- LEYENDA -->
+  <rect x="40" y="724" width="12" height="12" rx="2" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="58" y="734" font-size="10" fill="#444441">Módulo backend</text>
+  <rect x="170" y="724" width="12" height="12" rx="2" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="188" y="734" font-size="10" fill="#444441">Base de datos</text>
+  <rect x="300" y="724" width="12" height="12" rx="2" fill="#FAC775" stroke="#854F0B" stroke-width="0.5"/>
+  <text x="318" y="734" font-size="10" fill="#444441">Externo pagos</text>
+  <rect x="430" y="724" width="12" height="12" rx="2" fill="#F5C4B3" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="448" y="734" font-size="10" fill="#444441">Externo notif.</text>
+  <rect x="556" y="724" width="12" height="12" rx="2" fill="#B5D4F4" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="574" y="734" font-size="10" fill="#444441">Frontend</text>
+
+  <!-- Nota pie -->
+  <text x="340" y="760" text-anchor="middle" font-size="9" fill="#B4B2A9">C4 Model — Level 2 Container Diagram · Sistema de delivery · 2025</text>
+</svg>
