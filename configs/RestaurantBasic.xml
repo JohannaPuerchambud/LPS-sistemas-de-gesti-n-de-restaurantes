@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="RestaurantSystem"/>
+	<feature automatic="selected" name="Core"/>
+	<feature automatic="selected" name="Authentication"/>
+	<feature automatic="selected" name="MenuManagement"/>
+	<feature automatic="selected" name="OrderProcessing"/>
+	<feature automatic="selected" name="Payment"/>
+	<feature automatic="selected" name="Reports"/>
+	<feature automatic="selected" name="Service"/>
+	<feature manual="selected" name="TableManagement"/>
+	<feature name="Delivery"/>
+	<feature name="OnlineOrdering"/>
+	<feature automatic="selected" name="Management"/>
+	<feature name="Inventory"/>
+	<feature automatic="unselected" name="MultiBranch"/>
+	<feature name="Reservations"/>
+	<feature automatic="selected" name="Sales"/>
+	<feature name="Promotions"/>
+	<feature name="Notifications"/>
+	<feature automatic="selected" name="ProductType"/>
+	<feature manual="selected" name="RestaurantBasic"/>
+	<feature automatic="unselected" name="CafePOS"/>
+	<feature automatic="unselected" name="RestaurantDelivery"/>
+	<feature automatic="unselected" name="RestaurantChain"/>
+</configuration>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="6"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="RestaurantSystem">
+			<and mandatory="true" name="Core">
+				<feature mandatory="true" name="Authentication"/>
+				<feature mandatory="true" name="MenuManagement"/>
+				<feature mandatory="true" name="OrderProcessing"/>
+				<feature mandatory="true" name="Payment"/>
+				<feature mandatory="true" name="Reports"/>
+			</and>
+			<and mandatory="true" name="Service">
+				<feature name="TableManagement"/>
+				<feature name="Delivery"/>
+				<feature name="OnlineOrdering"/>
+			</and>
+			<and mandatory="true" name="Management">
+				<feature name="Inventory"/>
+				<feature name="MultiBranch"/>
+				<feature name="Reservations"/>
+			</and>
+			<and mandatory="true" name="Sales">
+				<feature name="Promotions"/>
+				<feature name="Notifications"/>
+			</and>
+			<alt mandatory="true" name="ProductType">
+				<feature name="RestaurantBasic"/>
+				<feature name="CafePOS"/>
+				<feature name="RestaurantDelivery"/>
+				<feature name="RestaurantChain"/>
+			</alt>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>RestaurantDelivery</var>
+				<conj>
+					<var>Delivery</var>
+					<var>OnlineOrdering</var>
+				</conj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>RestaurantChain</var>
+				<conj>
+					<var>MultiBranch</var>
+					<var>Inventory</var>
+				</conj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>CafePOS</var>
+				<var>TableManagement</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>OnlineOrdering</var>
+				<var>Payment</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>MultiBranch</var>
+				<var>Inventory</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>RestaurantBasic</var>
+				<not>
+					<var>MultiBranch</var>
+				</not>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>
